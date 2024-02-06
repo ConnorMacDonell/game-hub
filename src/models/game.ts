@@ -9,5 +9,6 @@ export default interface Game {
   slug: string,
   name: string,
   background_image: string,
-  parent_platforms: { platform: Platform }[]
+  parent_platforms: { platform: Platform }[],
+  metacritic: number
 }
