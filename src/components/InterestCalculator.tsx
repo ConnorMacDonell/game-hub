@@ -1,4 +1,3 @@
-import React from "react";
 import CompoundInterestCalculator from "../models/coumpoundInterestCalculator";
 
 let calculator = new CompoundInterestCalculator(0.08);
