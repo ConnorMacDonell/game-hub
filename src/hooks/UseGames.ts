@@ -19,7 +19,8 @@ useData<Game>(
     params: {
       genres: gameQuery.genre?.id,
       platforms: gameQuery.platform?.id,
-      ordering: gameQuery.sortOrder?.value
+      ordering: gameQuery.sortOrder?.value,
+      search: gameQuery.searchText
     }
   },
   [gameQuery]);
