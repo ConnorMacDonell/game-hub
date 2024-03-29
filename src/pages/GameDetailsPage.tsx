@@ -1,8 +1,8 @@
-import { Heading, Spinner, Text } from "@chakra-ui/react";
-import useGame from "../hooks/UseGame";
-import { Navigate, useParams } from "react-router-dom";
-import ErrorPage from "./ErrorPage";
+import { Heading, Spinner } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
+import GameAttributes from "../components/GameAttributes";
+import useGame from "../hooks/UseGame";
 
 const GameDetailsPage = () => {
   const { slug } = useParams();
@@ -13,8 +13,10 @@ const GameDetailsPage = () => {
   if (error || !game) throw error;
   return (
     <>
+      {console.log(game.parent_platforms[0])}
       <Heading>{game.name}</Heading>
       <ExpandableText>{game.description_raw}</ExpandableText>
+      <GameAttributes game={game} />
     </>
   );
 };
