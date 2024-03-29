@@ -2,6 +2,7 @@ import { Heading, Spinner, Text } from "@chakra-ui/react";
 import useGame from "../hooks/UseGame";
 import { Navigate, useParams } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
+import ExpandableText from "../components/ExpandableText";
 
 const GameDetailsPage = () => {
   const { slug } = useParams();
@@ -13,7 +14,7 @@ const GameDetailsPage = () => {
   return (
     <>
       <Heading>{game.name}</Heading>
-      <Text>{game.description_raw}</Text>
+      <ExpandableText>{game.description_raw}</ExpandableText>
     </>
   );
 };
