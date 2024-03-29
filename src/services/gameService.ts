@@ -1,13 +1,13 @@
-import APIClient, { FetchResponse } from "./api-client";
+import APIClient from "./api-client";
 import { Platform } from "./platformService";
 
-export interface Game {
+export interface GameDetails {
   id: number,
   slug: string,
   name: string,
-  background_image: string,
-  parent_platforms: { platform: Platform }[],
-  metacritic: number
+  description_raw: string,
+  rating: number,
+  platforms: Platform[]
 }
 
-export default new APIClient<Game>('/games');
+export default new APIClient<GameDetails>('/games');
