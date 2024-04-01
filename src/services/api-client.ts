@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { Platform } from "../entities/Platform";
-import { GameDetails } from "../entities/GameDetails";
+import Platform from "../entities/Platform";
+import GameDetails from "../entities/GameDetails";
 
 export interface FetchResponse<T> {
   count: number,

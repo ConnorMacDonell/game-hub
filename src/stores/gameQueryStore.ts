@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { SortOrder } from "../components/SortSelector";
-import { Genre } from "../entities/Genre";
-import { Platform } from "../entities/Platform";
+import Genre from "../entities/Genre";
+import Platform from "../entities/Platform";
 
 export interface GameQuery {
   genreId?: number;
